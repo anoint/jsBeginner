@@ -36,7 +36,7 @@ var 비동기콜백 = function (이벤트) {
             다참 = true;
             console.log("세로줄 채워짐");
         }
-        //대각선 검사
+        //왼쪽대각선 검사
         if (몇줄 - 몇칸 === 0) {
             if (칸들[0][0].textContent === 턴 &&
                 칸들[1][1].textContent === 턴 &&
@@ -46,7 +46,7 @@ var 비동기콜백 = function (이벤트) {
                 console.log("대각선 채워짐");
             }
         }
-        //대각선 검사
+        //오른쪽대각선 검사
         if (Math.abs(몇줄 - 몇칸) === 2) {
             if (칸들[0][2].textContent === 턴 &&
                 칸들[1][1].textContent === 턴 &&

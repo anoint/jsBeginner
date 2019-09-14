@@ -1,19 +1,19 @@
-var 바디 = document.body;
-var 테이블 = document.createElement('table');
-var 칸들 = [];
-var 줄들 = [];
-var 턴 = 'X';
-var 결과 = document.createElement('div');
+var 바디 = document.body; //문서의 내용
+var 테이블 = document.createElement('table'); //테이블
+var 칸들 = []; //칸들
+var 줄들 = []; //현재 줄
+var 턴 = 'X'; //차례
+var 결과 = document.createElement('div'); //게임 승부 표시
 var 비동기콜백 = function (이벤트) {
-    // console.log(이벤트.target); //td
-    // console.log(이벤트.target.parentNode); //tr
-    // console.log(이벤트.target.parentNode.parentNode); //table
+    // console.log(이벤트.target); //td 클릭한 태그
+    // console.log(이벤트.target.parentNode); //tr 클릭한 부모태그
+    // console.log(이벤트.target.parentNode.parentNode); //table 클릭한 조부모태그
     // console.log(이벤트.target.children); // 자식태그
-    var 몇줄 = 줄들.indexOf(이벤트.target.parentNode);
-    //console.log('몇줄이 왜 -1???' + 몇줄);
-    //console.log(칸들[몇줄]);
-    var 몇칸 = 칸들[몇줄].indexOf(이벤트.target);
-
+    var 몇줄 = 줄들.indexOf(이벤트.target.parentNode); // 클릭한 줄 인덱스
+    var 몇칸 = 칸들[몇줄].indexOf(이벤트.target); //클릭한 칸 인덱스
+    console.log("몇줄 :" + 몇줄);
+    console.dir("칸들[몇줄] :" + 칸들[몇줄]);
+    console.log("몇칸 :" + 몇칸);
     if (칸들[몇줄][몇칸].textContent !== '') {
         // console.log('빈칸이 아닙니다.');
     }
@@ -37,7 +37,7 @@ var 비동기콜백 = function (이벤트) {
             console.log("세로줄 채워짐");
         }
         //왼쪽대각선 검사
-        if (몇줄 - 몇칸 === 0) {
+        if (몇줄 - 몇칸 === 0) { // ?
             if (칸들[0][0].textContent === 턴 &&
                 칸들[1][1].textContent === 턴 &&
                 칸들[2][2].textContent === 턴
@@ -47,7 +47,7 @@ var 비동기콜백 = function (이벤트) {
             }
         }
         //오른쪽대각선 검사
-        if (Math.abs(몇줄 - 몇칸) === 2) {
+        if (Math.abs(몇줄 - 몇칸) === 2 || (몇줄 === 1 && 몇칸 === 1)) { // ?
             if (칸들[0][2].textContent === 턴 &&
                 칸들[1][1].textContent === 턴 &&
                 칸들[2][0].textContent === 턴

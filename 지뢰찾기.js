@@ -61,6 +61,47 @@ document.querySelector('#exec').addEventListener('click', function() {
                 }
             }             
         })
+        td.addEventListener('click', function (e) {
+            //클릭했을때 주변 지뢰 갯수
+            e.preventDefault();
+            let 부모tr = e.currentTarget.parentNode;
+            let 부모tbody = e.currentTarget.parentNode.parentNode;
+            let 칸 = Array.prototype.indexOf.call(부모tr.children, e.currentTarget);
+            console.dir(부모tr.children);
+            console.log(e.currentTarget);
+            console.log("칸 "+칸);
+            let 줄 = Array.prototype.indexOf.call(부모tbody.children, 부모tr);
+            console.dir("줄 item"+부모tbody.children);
+            console.dir("줄 item"+부모tr);
+            console.log("줄 item"+줄);
+            if (dataset[줄][칸] === 'X')
+            {
+                e.currentTarget.textContent = '펑';
+            } else 
+            {
+                let 주변 = [
+                    dataset[줄][칸-1], dataset[줄][칸+1]
+                ];
+                if(dataset[줄-1])
+                {
+                    주변 = 주변.concat([dataset[줄-1][칸-1],dataset[줄-1][칸], dataset[줄-1][칸+1]])
+                    주변.push();
+                }
+                if(dataset[줄+1])
+                {
+                    주변 = 주변.concat([dataset[줄+1][칸-1],dataset[줄+1][칸],dataset[줄+1][칸+1]]);
+                }
+               e.currentTarget.textContent = 
+            //    [
+            //        dataset[줄-1][칸-1], dataset[줄-1][칸], dataset[줄-1][칸+1],
+            //        dataset[줄][칸-1],
+            //        dataset[줄+1][칸-1], dataset[줄+1][칸], dataset[줄+1][칸+1]
+            //     ]
+                주변.filter(function (x) {
+                    return x === 'X';
+                }).length;                
+            }
+        });
         tr.appendChild(td);
         }
         tbody.appendChild(tr);

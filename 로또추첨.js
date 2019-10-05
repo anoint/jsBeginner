@@ -51,12 +51,23 @@ function 공색칠하기(숫자, 결과창) {
     공.style.background = 배경색;
     결과창.appendChild(공);
 }
+// 클로저에 즉시 실행 함수
 for (let index = 0; index < 6; index++) {
-    let time = (parseInt(index) + 1) * 1000;
-    console.log(time+' - time');
-    setTimeout(() => {
-        공색칠하기(당첨숫자들[index], 결과창);
-    }, time);
+    (function 클로저(j) {
+        let time = (parseInt(j) + 1) * 1000;
+        console.log(time+' - time');
+        setTimeout(() => {
+            공색칠하기(당첨숫자들[j], 결과창);
+        }, time);
+    }) (j);
+}
+//
+for (let index = 0; index < 6; index++) {
+        let time = (parseInt(index) + 1) * 1000;
+        console.log(time+' - time');
+        setTimeout(() => {
+            공색칠하기(당첨숫자들[index], 결과창);
+        }, time);
 }
 
 // setTimeout(() => {

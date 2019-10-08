@@ -68,6 +68,7 @@ document.querySelector('#exec').addEventListener('click', function() {
             let 칸 = Array.prototype.indexOf.call(부모tr.children, e.currentTarget);  
             let 줄 = Array.prototype.indexOf.call(부모tbody.children, 부모tr); 
             e.currentTarget.classList.add('opened');
+            dataset[줄][칸] = 1;
             if (dataset[줄][칸] === 'X')
             {
                 e.currentTarget.textContent = '펑';

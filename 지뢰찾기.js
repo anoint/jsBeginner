@@ -39,7 +39,6 @@ document.querySelector('#exec').addEventListener('click', function() {
             let 부모tbody = e.currentTarget.parentNode.parentNode;
             //?
             let 칸 = Array.prototype.indexOf.call(부모tr.children, e.currentTarget);
-            console.log(칸);
             //?
             let 줄 = Array.prototype.indexOf.call(부모tbody.children, 부모tr);
             if(e.currentTarget.textContent === '' || e.currentTarget.textContent === 'X')
@@ -66,40 +65,57 @@ document.querySelector('#exec').addEventListener('click', function() {
             e.preventDefault();
             let 부모tr = e.currentTarget.parentNode;
             let 부모tbody = e.currentTarget.parentNode.parentNode;
-            let 칸 = Array.prototype.indexOf.call(부모tr.children, e.currentTarget);
-            console.dir(부모tr.children);
-            console.log(e.currentTarget);
-            console.log("칸 "+칸);
-            let 줄 = Array.prototype.indexOf.call(부모tbody.children, 부모tr);
-            console.dir("줄 item"+부모tbody.children);
-            console.dir("줄 item"+부모tr);
-            console.log("줄 item"+줄);
+            let 칸 = Array.prototype.indexOf.call(부모tr.children, e.currentTarget);  
+            let 줄 = Array.prototype.indexOf.call(부모tbody.children, 부모tr); 
+            e.currentTarget.classList.add('opened');
             if (dataset[줄][칸] === 'X')
             {
                 e.currentTarget.textContent = '펑';
             } else 
             {
-                let 주변 = [
-                    dataset[줄][칸-1], dataset[줄][칸+1]
+                var 주변 = [ 
+                    dataset[줄][칸-1], dataset[줄][칸+1],
                 ];
-                if(dataset[줄-1])
-                {
-                    주변 = 주변.concat([dataset[줄-1][칸-1],dataset[줄-1][칸], dataset[줄-1][칸+1]])
-                    주변.push();
+                if(dataset[줄-1]) {
+                    주변= 주변.concat([dataset[줄-1][칸-1],dataset[줄-1][칸],
+                    dataset[줄-1][칸+1]]);
                 }
-                if(dataset[줄+1])
-                {
-                    주변 = 주변.concat([dataset[줄+1][칸-1],dataset[줄+1][칸],dataset[줄+1][칸+1]]);
+                if(dataset[줄+1]) {
+                    주변= 주변.concat([dataset[줄+1][칸-1],dataset[줄+1][칸],
+                    dataset[줄+1][칸+1]]);
                 }
-               e.currentTarget.textContent = 
-            //    [
-            //        dataset[줄-1][칸-1], dataset[줄-1][칸], dataset[줄-1][칸+1],
-            //        dataset[줄][칸-1],
-            //        dataset[줄+1][칸-1], dataset[줄+1][칸], dataset[줄+1][칸+1]
-            //     ]
-                주변.filter(function (x) {
+                var 주변지뢰갯수 = 주변.filter(function(x) {
                     return x === 'X';
-                }).length;                
+                }).length; 
+                e.currentTarget.textContent = 주변지뢰갯수;
+                if(주변지뢰갯수 === 0)
+                {
+                    //주변칸8칸동시 오픈(재귀함수)
+                    let 주변칸 = [];
+                    if(tbody.children[줄-1]) {
+                        주변칸 = 주변칸.concat([
+                            tbody.children[줄-1].children[칸-1],
+                            tbody.children[줄-1].children[칸],
+                            tbody.children[줄-1].children[칸+1],
+                        ])
+                    }
+                    주변칸 = 주변칸.concat([
+                        tbody.children[줄].children[칸-1],
+                        tbody.children[줄].children[칸+1],
+                    ])
+                    if(tbody.children[줄+1]) {
+                        주변칸 = 주변칸.concat([
+                            tbody.children[줄+1].children[칸-1],
+                            tbody.children[줄+1].children[칸],
+                            tbody.children[줄+1].children[칸+1],
+                        ])
+                    }
+                    주변칸.filter(function (v) { 
+                        return !!v;
+                        }).forEach(function (옆칸) {
+                        옆칸.click();                        
+                    });
+                }
             }
         });
         tr.appendChild(td);
@@ -117,79 +133,15 @@ document.querySelector('#exec').addEventListener('click', function() {
     // console.log(dataset);
 })
 
+function 재귀함수(숫자) {
+    console.log(숫자);
+    if(숫자 < 5)
+    {
+        재귀함수(숫자+1);
+    }
+}
+재귀함수 (1);
 tbody.addEventListener('contextmenu', function (e) {
     // console.log(e.currentTarget);    
     // console.log(e.target);    
 })
-
-//스코프 변수
-var name = 'jina';
-function outer() {
-    console.log('외부', name); // jina
-    function inner() {
-        var enemy = 'nero';
-        console.log('내부', name); // jina
-        
-    }
-    inner();
-}
-outer();
-console.log(enemy); // nero
-
-//렉시컬 스코프 : 코드가 적힌 순간 스코프가 정해짐
-var name = 'jina';
-function log() {
-    console.log(name); //jina
-}
-function wrapper() {
-    var name = 'rina'; // var는 function 범위만 사용가능하다.
-    log(); //rina(o), jina(o)
-}
-wrapper(); //rina
-
-//클로저: 반복문안에 비동기함수를 사용할 때 사용함.
-//before : 
-for (let i = 0; i < 100; i++) {
-    setTimeout(function() {
-        console.log(i);
-    }, i * 1000);    
-}
-// --- 반복문 실행되는 구문--------------------------------------
-setTimeout(function() { // 스코프체인을 따라서 변수를 찾고 비동기함수는 실행되는 순간에 변수값을 찾는다.
-    console.log(i); // 100 - 100개반복문이 만들어 진 후 실행됨.
-}, 0 * 1000);  //0초
-
-setTimeout(function() {
-    console.log(i); // 100
-}, 1 * 1000);   //1초 뒤에 i를 찾음
-
-setTimeout(function() {
-    console.log(i); //100
-}, 2 * 1000);  
-//함수 안의 변수는 실행될 때 값이 결정됨.
-//-------------------------------------------
-
-//after : 실제 인자로 값을 가짐
-for (let i = 0; i < 100; i++) {
-    function 클로저(i) {
-        setTimeout(function() {
-            console.log(i);
-        }, i * 1000);    
-    } 클로저(i); //만든 직후 실행하도록 
-}
-// --- 반복문 실행되는 구문--------------------------------------
-function 클로저 (i) {
-    setTimeout(function() { //  
-        console.log(i); //0  
-    }, 0 * 1000);  //0초
-}
-function 클로저 (i) {
-    setTimeout(function() { //  
-        console.log(i); //1  
-    }, 1 * 1000);  //1초
-}
-function 클로저 (i) {
-    setTimeout(function() { //  
-        console.log(i); //2  
-    }, 2 * 1000);  //2초
-}

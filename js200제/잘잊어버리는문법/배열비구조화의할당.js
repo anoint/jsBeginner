@@ -8,8 +8,10 @@ console.log(`0) rest >>> ${rest}`);
 var [a=10, f=9] = [1];
 console.log(`1) a >>> ${a}`);
 console.log(`1) f >>> ${f}`);
+
 //배열 비구조화의 기본값 할당
 [a, f] = [f, a];
+
 console.log(`2) a >>> ${a}`);
 console.log(`2) f >>> ${f}`);
 

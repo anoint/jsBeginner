@@ -37,8 +37,7 @@ extends finally for function if import in instance of let new return super switc
 3. 불린형
 4. null
 5. undefined
-6. Symbol
-## 여러줄 선택 단축키는?
+6. Symbola 
 
 - 참조타입 : 값의 메모리 주소를 참조한다. 객체는 속성들의 집합이고 순서와 크기가 정해져 있지 않다.
 7. 객체 : 객체는 { } 안에 키 : 값 형태로 이루어진 속성들의 모음이다.

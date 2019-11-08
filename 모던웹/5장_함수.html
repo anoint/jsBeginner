@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0219)file:///E:/programming_language/Javascript/beginner/jsBeginner/%EB%AA%A8%EB%8D%98_%EC%9B%B9%EC%9D%84_%EC%9C%84%ED%95%9C_%EC%9C%A4%EC%9D%B8%EC%84%B1/%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C/5%EC%9E%A5_%ED%95%A8%EC%88%98.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 1. 실행 결과를 예측하세요. */
+        function test(a,b,c) {
+            console.log(a);
+            console.log(a*b);
+            console.log(a*b*c);
+        }    
+        test(10,100);
+        //"10","1000",NaN
+        /* 2. power,multiply함수를 만들어 보세요.
+         power은 매개변수를 하나 넣으면 제곱해준다.
+         매개변수를 두개 넣으면 첫번째 매개변수의 두번째 매개변수로 제곱해준다. 
+         multiply는 매개변수를 넣으면 모두 곱해준다.
+        
+        function power (a,b)
+        {
+            var result = 1; // 초기값을 0을 넣으면 곱셈을 할때 무조건 0이므로 1을 넣는다.
+            if(b)
+            {
+                for (let i = 0; i < b; i++) {
+                    result = result * a; // 결과값을 누적하여 곱해야 한다.
+                }
+                alert(`${a}의 ${b}제곱은 ${result} 입니다`);
+            } else 
+            {
+                result = a*a;
+                alert(`${a}의 제곱은 ${result} 입니다`);
+            }
+        }
+        power(5);
+        power(5,5);
+        function multiply ()
+        {
+            var result = 1;
+            var msg = '';
+        //    arguments.forEach(element => {
+        //         result *= element;
+        //     });
+            for (let i = 0; i < arguments.length; i++) {
+                result *= arguments[i];
+                msg += String(arguments[i]) + ' ';
+            }
+            alert(`${msg} 곱은 ${result} 입니다.`);
+        }
+        multiply(500,30);
+         3. 숫자로만 구성되어 있는지 확인하는 구성되어 있는지 확인하는 코드를 작성하세요.
+        */
+       var input = prompt('숫자를 입력하세요','');
+       if(!input)
+       {
+           alert('값을 입력하세요');
+       }    
+       else if(isNaN(input))
+       {
+           alert('문자입니다.');
+       }
+       else 
+       {
+           alert('숫자입니다.');
+       }
+    </script>
+
+
+
+</body></html>

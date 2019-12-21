@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script> // 2)
+        window.onload = function() {
+            const divSelector = 'div'
+            const div = document.querySelector(divSelector)
+            console.log(`divSelector : ${divSelector}`) // 태그명은 변경을 용이하기 위해 변수정의함
+            console.log(div)//템플릿
+            const buttonSelector = 'button'
+            const button = document.querySelector(buttonSelector)
+            const childButtonSelector = 'button'
+            const childButton = div.querySelector(childButtonSelector)
+            const addButtonSelector = '.add-btn'
+            const addButton = div.querySelector(childButtonSelector) 
+
+            console.log(addButton)
+            console.log(`button.textContent : ${button.textContent}`)
+            console.log(`button.textContent : ${childButton.textContent}`)
+        }
+    </script>
+    <!-- 
+        <script>
+            const divSelector = 'div'
+            const div = document.getElementById("myDIV");
+            console.log(div) 
+        </script>  
+    -->
+    <!-- 
+        오류 :DOM가져오기.html:15 Uncaught TypeError: Cannot read property 'querySelector' of null
+            at DOM가져오기.html:15
+        원인 :인터프리터 방식인 html은 태그 생성 전 상태라서 못찾는다.
+        해결 :1) script소스 순서를 밑으로 변경한다.
+            2) window.onload = function() {} 사용
+    -->
+</head>
+<body>
+    <button>Button 1</button>
+    <div id="myDIV">
+        <button class="btn-add">추가</button>
+    </div>
+    <!-- 2)
+         <script>
+            const divSelector = 'div'
+            const div = document.querySelector(divSelector)
+            const buttonSelector = 'button'
+            const button = document.querySelector(buttonSelector)
+            const childButtonSelector = 'button'
+            const childButton = div.querySelector(childButtonSelector)
+    
+            console.log(button.textContent)
+            console.log(childButton.textContent)
+    </script> -->
+
+</body>
+</html>

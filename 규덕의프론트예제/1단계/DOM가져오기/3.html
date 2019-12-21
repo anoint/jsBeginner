@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3</title>
+    <script>
+        window.onload = function () {
+            const divSelector = 'div'
+            const div = document.querySelector(divSelector)
+            const buttonSelector = 'button'
+            const button = document.querySelector(buttonSelector)
+            const childButtonSelector = '.btn-add'
+            const childButton = div.querySelector(childButtonSelector)
+            console.log(div.textContent)
+            console.log(button.textContent)
+            const selector = 'button'
+            const buttons = document.querySelectorAll(selector)
+            console.log(buttons.length)
+            console.log(buttons[0])
+            buttons.forEach(button => {
+                console.log(button)
+            })
+        }
+    </script>
+</head>
+<body>
+    <button>button1</button>
+    <div>
+        <button class="btn-add">추가</button>
+    </div>
+</body>
+</html>

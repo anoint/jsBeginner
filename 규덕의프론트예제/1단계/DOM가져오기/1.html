@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>3h</title>
     <script> // 2)
         window.onload = function() {
             const divSelector = 'div'
@@ -21,6 +21,15 @@
             console.log(addButton)
             console.log(`button.textContent : ${button.textContent}`)
             console.log(`button.textContent : ${childButton.textContent}`)
+
+            const selector = 'button'
+            const buttons = document.querySelectorAll(selector)
+
+            console.log(buttons.length)
+            console.log(button[0])
+            buttons.forEach(button => {
+                console.log(button) //태그가 찍힘
+            })
         }
     </script>
     <!-- 
@@ -43,7 +52,7 @@
     <div id="myDIV">
         <button class="btn-add">추가</button>
     </div>
-    <!-- 2)
+    <!-- 1)
          <script>
             const divSelector = 'div'
             const div = document.querySelector(divSelector)

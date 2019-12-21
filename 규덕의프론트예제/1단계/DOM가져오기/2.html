@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM가져오기</title>
+    <script>
+        window.onload = function() {
+        //1.querySelector
+        //태그 3개 가져오기
+        const divSelector = 'div'
+        const div = document.querySelector(divSelector)
+        const btnSelector = 'button'
+        const button = document.querySelector(btnSelector)
+        const addBtnSelector = '.btn-add'
+        const childBtn = div.querySelector(addBtnSelector)
+        //버튼글자 출력하기
+        console.log(button.textContent)
+        console.log(childBtn.textContent)
+        
+        //2.querySelectorAll
+        //버튼태그 모두 가져오기
+        //버튼태그 길이 출력
+        //버튼태그 0번째 출력
+        const selector = 'button'
+        const buttons = document.querySelectorAll(selector)
+        console.log(buttons.length)
+        console.log(buttons[0])
+
+        //3.NodeList
+        buttons.forEach(button => {
+            console.log(button)
+        })
+    }
+    </script>
+</head>
+<body>
+    <button>button 1</button>
+    <div>
+        <button class="btn-add">추가</button>
+    </div>
+</body>
+</html>

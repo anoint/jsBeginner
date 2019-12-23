@@ -1,0 +1,257 @@
+[33mcommit c3c5416edf395368946bf956597343cb815a9d1d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Reflog: HEAD@{0} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 2-1
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Mon Dec 23 17:15:09 2019 +0900
+
+    2-1
+
+[33mcommit ba7cb329f448aa1545312fb0ea202b837564db31[m
+Reflog: HEAD@{1} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 1
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Mon Dec 23 17:04:45 2019 +0900
+
+    1
+
+[33mcommit c786bd14c2024d211354f778fe180e3d50ea7090[m
+Reflog: HEAD@{2} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 3
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Sat Dec 21 18:49:14 2019 +0900
+
+    3
+
+[33mcommit b0ef43db0e8b5ab09285c550fcf4176382adb3bb[m
+Reflog: HEAD@{3} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 2
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Sat Dec 21 18:08:10 2019 +0900
+
+    2
+
+[33mcommit e07b3bc3613e058544b182bae470d482eb8ef0bd[m
+Reflog: HEAD@{4} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: first
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Sat Dec 21 17:13:10 2019 +0900
+
+    first
+
+[33mcommit cc6579fae5e5afa68f1639b8655239f5cd541826[m
+Reflog: HEAD@{5} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 20191208
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Sun Dec 8 22:38:12 2019 +0900
+
+    20191208
+
+[33mcommit 710718b8f7381c32506580fa8ff14539f4f4f3b9[m
+Reflog: HEAD@{6} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 20191121
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Thu Nov 21 15:42:40 2019 +0900
+
+    20191121
+
+[33mcommit 84a4ba828af1de4ce3e0998703ac4924ba1d6bff[m
+Reflog: HEAD@{7} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 6장까지
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Fri Nov 8 18:32:32 2019 +0900
+
+    6장까지
+
+[33mcommit 676056464e56ef37e5e1724302dc5d0464b52434[m
+Reflog: HEAD@{8} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: reset: moving to origin/master
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Thu Oct 31 17:18:52 2019 +0900
+
+    초급29,30,31
+
+[33mcommit c65fdc1904bebe762c8a60e6213b18ab22156709[m
+Reflog: HEAD@{9} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: reset: moving to HEAD
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Fri Nov 8 18:17:53 2019 +0900
+
+    6장
+
+[33mcommit c65fdc1904bebe762c8a60e6213b18ab22156709[m
+Reflog: HEAD@{10} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 6장
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Fri Nov 8 18:17:53 2019 +0900
+
+    6장
+
+[33mcommit 66f118d82cce66cd5e8235829049640ec825b737[m
+Reflog: HEAD@{11} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: reset: moving to HEAD^
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Fri Nov 8 18:05:44 2019 +0900
+
+    모던웹_연습문제_4-6장
+
+[33mcommit 1fe18d9c42488f27319fc85ff5525e2f4da61fe2[m
+Reflog: HEAD@{12} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 모던웹_연습문제_4-6장
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Fri Nov 8 18:10:40 2019 +0900
+
+    모던웹_연습문제_4-6장
+
+[33mcommit 66f118d82cce66cd5e8235829049640ec825b737[m
+Reflog: HEAD@{13} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 모던웹_연습문제_4-6장
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Fri Nov 8 18:05:44 2019 +0900
+
+    모던웹_연습문제_4-6장
+
+[33mcommit 676056464e56ef37e5e1724302dc5d0464b52434[m
+Reflog: HEAD@{14} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 초급29,30,31
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Thu Oct 31 17:18:52 2019 +0900
+
+    초급29,30,31
+
+[33mcommit 9818f27e143d5f6a65232b88e16e7ae64d53ab80[m
+Reflog: HEAD@{15} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 20191030
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Wed Oct 30 18:58:01 2019 +0900
+
+    20191030
+
+[33mcommit 8e89aba32f62e02efabff1f4915b6ae3e36a8976[m
+Reflog: HEAD@{16} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: -28 따라치며 외우기
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Wed Oct 23 18:12:01 2019 +0900
+
+    -28 따라치며 외우기
+
+[33mcommit 7a957c66d91b5ee596d8d66a96f151157cb2a552[m
+Reflog: HEAD@{17} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 59까지
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Tue Oct 22 20:47:44 2019 +0900
+
+    59까지
+
+[33mcommit fc417d80c3bf1372a08fcd31205abe3487f8277e[m
+Reflog: HEAD@{18} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 20191021
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Mon Oct 21 20:54:46 2019 +0900
+
+    20191021
+
+[33mcommit 391c7ffaee28065333e6adf1ad76b5549c18bda2[m
+Reflog: HEAD@{19} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: -32제 요약
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Sat Oct 19 00:33:38 2019 +0900
+
+    -32제 요약
+
+[33mcommit 3f2a98cf854edf847a61253699d870c9039b9b1a[m
+Reflog: HEAD@{20} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: test
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Thu Oct 17 21:15:51 2019 +0900
+
+    test
+
+[33mcommit 6f6ac5bfbf21401638567caf405ff57b9279a4a7[m
+Reflog: HEAD@{21} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: -25 1번 침
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Thu Oct 17 21:11:09 2019 +0900
+
+    -25 1번 침
+
+[33mcommit 9a8c8f5e6977a663890a76466ddb6bc07dadce1e[m
+Reflog: HEAD@{22} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: day42까지
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Wed Oct 16 20:43:39 2019 +0900
+
+    day42까지
+
+[33mcommit 97078250c26351bc93eeb00f3467b734b6731401[m
+Reflog: HEAD@{23} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 폴더이동
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Wed Oct 16 17:52:12 2019 +0900
+
+    폴더이동
+
+[33mcommit a87f421ca58a6c8f2eb1f292de856e7955a2a26b[m
+Reflog: HEAD@{24} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: pull: Merge made by the 'recursive' strategy.
+Merge: bf7f3d7 826ac99
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Wed Oct 16 17:51:31 2019 +0900
+
+    Merge branch 'master' of https://github.com/anoint/jsBeginner
+
+[33mcommit bf7f3d762e8fb6afb97cee873a307c98b92f9e60[m
+Reflog: HEAD@{25} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit (merge): 1016폴더로 이동
+Merge: e762dd9 2718a40
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Wed Oct 16 17:50:08 2019 +0900
+
+    1016폴더로 이동
+
+[33mcommit e762dd9ac37c75d9607a9abf55962c563c8bfe35[m
+Reflog: HEAD@{26} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: reset: moving to HEAD
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Sat Sep 14 15:47:48 2019 +0900
+
+    로또추첨기 기능 구현 이해하기
+
+[33mcommit e762dd9ac37c75d9607a9abf55962c563c8bfe35[m
+Reflog: HEAD@{27} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 로또추첨기 기능 구현 이해하기
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Sat Sep 14 15:47:48 2019 +0900
+
+    로또추첨기 기능 구현 이해하기
+
+[33mcommit 355fd21f18ac614a3d295f537053e2d080a1dab5[m
+Reflog: HEAD@{28} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 틱택토 2
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Sat Aug 31 15:04:51 2019 +0900
+
+    틱택토 2
+
+[33mcommit ace5f48b463045743604ee69e7858ddf803e3258[m
+Reflog: HEAD@{29} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 틱택토 1번 완성
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Thu Aug 29 14:32:37 2019 +0900
+
+    틱택토 1번 완성
+
+[33mcommit 07037051976771655b24d6fe9ff979b3dee2b92e[m
+Reflog: HEAD@{30} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: commit: 틱택톡
+Author: anoint <dbwlsk870@hanmail.net>
+Date:   Wed Aug 28 12:23:12 2019 +0900
+
+    틱택톡
+
+[33mcommit ae36112b46b04a9b39b7d549147d3389f8a71963[m
+Reflog: HEAD@{31} (anoint <dbwlsk870@hanmail.net>)
+Reflog message: clone: from https://github.com/anoint/jsBeginner.git
+Author: anoint <dbwlsk870@gmail.com>
+Date:   Tue Aug 27 18:37:13 2019 +0900
+
+    Initial commit

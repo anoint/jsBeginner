@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+// const fruits = [
+//     [ "🍎", 5 ],
+//     [ "🍊", 6 ],
+//     [ "🍌", 4 ],
+//     [ "🍉", 10 ],
+//     [ "🍇", 7 ],
+//     [ "🍓", 6 ],
+// ]
+// const table = document.createElement('table')
+// fruits.forEach(([ fruit, count]) => {
+//     const tr = document.createElement('tr')
+//     const fruitCell = document.createElement('td')
+//     const countCell = document.createElement('td')
+//     fruitCell.textContent = fruit
+//     countCell.textContent = `${count} 개`
+//     tr.append(fruitCell, countCell)
+//     table.append(tr)
+// })
+// document.body.append(table)
+// axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits')
+// .then((res) => {
+//     const data = res.data
+//     const fruits = []
+//     Object.keys(data).forEach(fruit => {
+//         fruits.push([ fruit, data[fruit] ])
+//     })
+//     alert(JSON.stringify(fruits, null, 4))
+// })
+window.addEventListener('DOMContentLoaded', function () {
+  axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits') //axios 왜 없다고 오류날까? 
+  .then(function (res) {
+    var data = res.data;
+    var fruits = [];
+    Object.keys(data).forEach(function (fruit) {
+      fruits.push([fruit, data[fruit]]);
+    });
+    var table = document.createElement('table');
+    fruits.forEach(function (_ref) {
+      var _ref2 = _slicedToArray(_ref, 2),
+          fruits = _ref2[0],
+          count = _ref2[1];
+
+      var tr = document.createElement('tr');
+      var fruitCell = document.createElement('td');
+      var countCell = document.createElement('td');
+      fruitCell.textContent = fruit;
+      countCell.textContent = "".concat(count, " \uAC1C");
+      tr.append(fruitCell, countCell);
+      table.append(tr);
+    });
+    document.body.append(table);
+  });
+});</script>
+</body>
+</html>

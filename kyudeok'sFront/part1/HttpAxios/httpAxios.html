@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const fruits = [
+        //     [ "🍎", 5 ],
+        //     [ "🍊", 6 ],
+        //     [ "🍌", 4 ],
+        //     [ "🍉", 10 ],
+        //     [ "🍇", 7 ],
+        //     [ "🍓", 6 ],
+        // ]
+        // const table = document.createElement('table')
+        // fruits.forEach(([ fruit, count]) => {
+        //     const tr = document.createElement('tr')
+        //     const fruitCell = document.createElement('td')
+        //     const countCell = document.createElement('td')
+        //     fruitCell.textContent = fruit
+        //     countCell.textContent = `${count} 개`
+        //     tr.append(fruitCell, countCell)
+        //     table.append(tr)
+        // })
+        // document.body.append(table)
+
+        // axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits')
+        // .then((res) => {
+        //     const data = res.data
+        //     const fruits = []
+
+        //     Object.keys(data).forEach(fruit => {
+        //         fruits.push([ fruit, data[fruit] ])
+        //     })
+        //     alert(JSON.stringify(fruits, null, 4))
+        // })
+        window.addEventListener('DOMContentLoaded', () => {
+            axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits')
+            //axios 왜 없다고 오류날까? 
+            .then((res) => {
+                const data = res.data
+                const fruits = []
+
+                Object.keys(data).forEach(fruit => {
+                    fruits.push([ fruit, data[fruit] ])
+                })
+
+                const table = document.createElement('table')
+                fruits.forEach(([ fruits, count ]) => {
+                    const tr = document.createElement('tr')
+
+                    const fruitCell = document.createElement('td')
+                    const countCell = document.createElement('td')
+
+                    fruitCell.textContent = fruit
+                    countCell.textContent = `${count} 개`
+
+                    tr.append(fruitCell, countCell)
+
+                    table.append(tr)
+                })
+                document.body.append(table)
+            })
+        })
+    </script>
+</body>
+</html>

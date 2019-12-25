@@ -38,7 +38,7 @@
         buttons.forEach(button => {
             button.addEventListener('click', e => {
                 console.log(e.currentTarget.value)
-                // e.currentTarget의 대상이 왜 span이 되는가?
+                // e.currentTarget의 대상은 button의 value인 1이다.
                 quantityVaule +=  Number(e.currentTarget.value)
                 if(quantityVaule < 0)
                 {
@@ -57,7 +57,7 @@
     3. button 버튼 id,name,type 변경하기
     4. button click 이벤트 추가하고 내용 출력하기
     5. input keypredd 이벤트 추가하고 값 출력하기
-        <span class="quantity">
+    <span class="quantity">
         수량
     </span>
     <button>버튼</button>
@@ -80,7 +80,7 @@
         input.addEventListener('keypress', e => {
             console.log(e.currentTarget.value)
         })
-        // keypress이벤트의 발생시점은 언제인가?
+        // keypress이벤트의 발생시점은 누르는중에 발생
     </script> -->
 </body>
 </html>

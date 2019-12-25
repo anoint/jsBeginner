@@ -29,8 +29,8 @@
     let quantity = document.querySelector('.action-wrapper span')
     let quantityValue = 0
     buttons.forEach(button => {
-        button.addEventListener('click', e => {
-                console.log(e.currentTarget.value)
+        button.addEventListener('click', e => { 
+            console.log(e.currentTarget.value)
             quantityValue += Number(e.currentTarget.value)
 
             if(quantityValue < 0)
@@ -44,6 +44,7 @@
             }
             quantity.textContent = quantityValue
             })
+            
     })
     </script>
      <!-- 연습1)
@@ -52,7 +53,7 @@
     3. button 버튼 id,name,type 변경하기
     4. button click 이벤트 추가하고 내용 출력하기
     5. input keypress 이벤트 추가하고 값 출력하기
-    
+    -->
      <span class='quantity'>수량</span>
      <button>버튼</button>
      <input type="text">
@@ -64,14 +65,15 @@
          button.id = 'btn1'
          button.type = 'submit'
          button.name = 'button1'
-         let input = document.querySelector('input')
          button.addEventListener('click', e => {
              console.log(e.currentTarget.textContent)
          })
-         input.addEventListener('keypress', e => {
+         let input = document.querySelector('input')
+            input.addEventListener('keypress', e => {
              console.log(e.currentTarget.value)
-         })
-        
-     </script>  -->
+            })
+         
+
+     </script>  
 </body>
 </html>

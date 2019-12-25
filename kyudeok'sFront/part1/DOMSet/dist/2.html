@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DomSet</title>
-</head>
+    <title>DomSet</title> 
+    <link rel="stylesheet" href="/style.6d80b553.css">
+<script src="/style.6d80b553.js"></script></head>
 <body>
     <div class="product-wrapper">
         <div class="img-wrapper">
@@ -23,7 +24,39 @@
             </div>
         </div>
     </div>
-    <!-- <span class="quantity">
+    <!-- 
+        연습2)
+        1. button 버튼 클릭하면 값가져와서 저장하기
+        2. 수량이 0보다 작으면 커야된다는 로그출력하기
+        3. 아니면 수량은 값입니다. 로그출력하기
+        4. 수량값을 적용하기
+     -->
+    <script>var buttons = document.querySelectorAll('.button-wrapper button');
+var quantity = document.querySelector('.quantity-wrapper span');
+var quantityVaule = 0;
+buttons.forEach(function (button) {
+  button.addEventListener('click', function (e) {
+    console.log(e.currentTarget.value); // e.currentTarget의 대상이 왜 span이 되는가?
+
+    quantityVaule += Number(e.currentTarget.value);
+
+    if (quantityVaule < 0) {
+      console.log("\uC218\uB7C9\uC740 0\uBCF4\uB2E4 \uCEE4\uC57C\uD569\uB2C8\uB2E4");
+      quantityVaule = 0;
+    } else {
+      console.log("\uC218\uB7C9\uC740 ".concat(quantityVaule, "\uC785\uB2C8\uB2E4"));
+    }
+
+    quantity.textContent = quantityVaule;
+  });
+});</script>
+    <!-- 연습1)
+    1. span 수량 내용 변경하기
+    2. button 버튼 id 변경하기
+    3. button 버튼 id,name,type 변경하기
+    4. button click 이벤트 추가하고 내용 출력하기
+    5. input keypredd 이벤트 추가하고 값 출력하기
+        <span class="quantity">
         수량
     </span>
     <button>버튼</button>

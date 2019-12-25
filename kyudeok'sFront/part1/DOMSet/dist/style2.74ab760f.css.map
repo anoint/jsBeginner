@@ -1,0 +1,1 @@
+{"version":3,"sources":["src\\style2.scss"],"names":[],"mappings":"AAAA,gBAAgB,CAChB;EACI,KAAK,EAAC,KAAK;EACX,MAAM,EAAE,MAAM,GACjB","file":"style2.74ab760f.css","sourceRoot":"..","sourcesContent":[".product-wrapper\r\n{\r\n    width:256px;\r\n    margin: 0 auto;\r\n}"]}

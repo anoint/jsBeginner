@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DomSet</title>
-    <script src="./src/main2.scss"></script>
+    <title>DomSet</title> 
+    <link rel="stylesheet" href="./src/style.scss">
 </head>
 <body>
     <div class="product-wrapper">
         <div class="img-wrapper">
             <img src="http://www.chocomom.com/shopimages/satria/0430240385612.jpg?1440983766" alt="양말">
         </div>
-        <div class="action-warpper">
+        <div class="action-wrapper">
             <div class="button-wrapper">
                 <button type="button" value="-1">-</button>
             </div>
@@ -24,13 +24,21 @@
             </div>
         </div>
     </div>
-    <script>
-        const button = document.querySelector('.button-wrapper button')
+    <!-- 
+        연습2)
+        1. button 버튼 클릭하면 값가져와서 저장하기
+        2. 수량이 0보다 작으면 커야된다는 로그출력하기
+        3. 아니면 수량은 값입니다. 로그출력하기
+        4. 수량값을 적용하기
+     -->
+    <script> 
+        const buttons = document.querySelectorAll('.button-wrapper button')
         let quantity = document.querySelector('.quantity-wrapper span')
         let quantityVaule = 0
         buttons.forEach(button => {
             button.addEventListener('click', e => {
                 console.log(e.currentTarget.value)
+                // e.currentTarget의 대상이 왜 span이 되는가?
                 quantityVaule +=  Number(e.currentTarget.value)
                 if(quantityVaule < 0)
                 {
@@ -43,7 +51,13 @@
             })
         })
     </script>
-    <!-- <span class="quantity">
+    <!-- 연습1)
+    1. span 수량 내용 변경하기
+    2. button 버튼 id 변경하기
+    3. button 버튼 id,name,type 변경하기
+    4. button click 이벤트 추가하고 내용 출력하기
+    5. input keypredd 이벤트 추가하고 값 출력하기
+        <span class="quantity">
         수량
     </span>
     <button>버튼</button>

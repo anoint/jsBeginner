@@ -7,7 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
+    integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
+    <!-- 와우! npm으론 안되더니 cdn은 되네? -->
+    <script> 
+    
+
         // const fruits = [
         //     [ "🍎", 5 ],
         //     [ "🍊", 6 ],
@@ -40,7 +45,7 @@
         // })
         window.addEventListener('DOMContentLoaded', () => {
             axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits')
-            //axios 왜 없다고 오류날까? 
+            //axios 왜 없다고 오류날까? 오타가
             .then((res) => {
                 const data = res.data
                 const fruits = []
@@ -50,7 +55,7 @@
                 })
 
                 const table = document.createElement('table')
-                fruits.forEach(([ fruits, count ]) => {
+                fruits.forEach(([ fruit, count ]) => {
                     const tr = document.createElement('tr')
 
                     const fruitCell = document.createElement('td')

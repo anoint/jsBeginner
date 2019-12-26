@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
+    <!-- 와우! npm으론 안되더니 cdn은 되네? -->
     <script>function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -44,7 +46,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //     alert(JSON.stringify(fruits, null, 4))
 // })
 window.addEventListener('DOMContentLoaded', function () {
-  axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits') //axios 왜 없다고 오류날까? 
+  axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits') //axios 왜 없다고 오류날까? 오타가
   .then(function (res) {
     var data = res.data;
     var fruits = [];
@@ -54,7 +56,7 @@ window.addEventListener('DOMContentLoaded', function () {
     var table = document.createElement('table');
     fruits.forEach(function (_ref) {
       var _ref2 = _slicedToArray(_ref, 2),
-          fruits = _ref2[0],
+          fruit = _ref2[0],
           count = _ref2[1];
 
       var tr = document.createElement('tr');

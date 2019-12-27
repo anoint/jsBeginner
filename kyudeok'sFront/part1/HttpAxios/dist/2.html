@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
+</head> 
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
-    <!-- 와우! npm으론 안되더니 cdn은 되네? -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -17,37 +16,10 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-// const fruits = [
-//     [ "🍎", 5 ],
-//     [ "🍊", 6 ],
-//     [ "🍌", 4 ],
-//     [ "🍉", 10 ],
-//     [ "🍇", 7 ],
-//     [ "🍓", 6 ],
-// ]
-// const table = document.createElement('table')
-// fruits.forEach(([ fruit, count]) => {
-//     const tr = document.createElement('tr')
-//     const fruitCell = document.createElement('td')
-//     const countCell = document.createElement('td')
-//     fruitCell.textContent = fruit
-//     countCell.textContent = `${count} 개`
-//     tr.append(fruitCell, countCell)
-//     table.append(tr)
-// })
-// document.body.append(table)
-// axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits')
-// .then((res) => {
-//     const data = res.data
-//     const fruits = []
-//     Object.keys(data).forEach(fruit => {
-//         fruits.push([ fruit, data[fruit] ])
-//     })
-//     alert(JSON.stringify(fruits, null, 4))
-// })
+//DOMContentLoaded이벤트는 최초 HTML 문서가 완전히 로드 및 파싱되었을때 발생된다.
+//window: 전역객체
 window.addEventListener('DOMContentLoaded', function () {
-  axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits') //axios 왜 없다고 오류날까? 
-  .then(function (res) {
+  axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits').then(function (res) {
     var data = res.data;
     var fruits = [];
     Object.keys(data).forEach(function (fruit) {

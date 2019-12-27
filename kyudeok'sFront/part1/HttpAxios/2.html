@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head> 
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        //DOMContentLoaded이벤트는 최초 HTML 문서가 완전히 로드 및 파싱되었을때 발생된다.
+        //window: 전역객체
+        //() => {} 함수시작
+        //get방식으로 호출
+        //응답을 받으면 
+        //응답받은 데이터가져오기
+        //과일들 정의
+        //Object 에 속한 key를 배열 형태로 가져온다.
+        //forEach를 돌려 배열에 넣는다.
+        //테이블을 만들어 과일과 갯수를 출력한다.
+        window.addEventListener('DOMContentLoaded', () => {
+            axios.get('https://5cfaac38f26e8c00146d0a96.mockapi.io/api/fruits')
+            .then((res) => {
+                const data = res.data
+                const fruits = []
+                Object.keys(data).forEach(fruit => {
+                    fruits.push([ fruit, data[fruit] ])
+                })
+                const table = document.createElement('table')
+                fruits.forEach(([ fruit, count ]) => {
+                    const tr = document.createElement('tr')
+
+                    const fruitCell = document.createElement('td')
+                    const countCell = document.createElement('td')
+                    
+                    fruitCell.textContent = fruit
+                    countCell.textContent = `${count} 개`
+
+                    tr.append(fruitCell, countCell)
+                    table.append(tr)
+                })
+                document.body.append(table)
+            })
+        })
+    </script>
+</body>
+</html>
